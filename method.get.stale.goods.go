@@ -22,6 +22,7 @@ type StaleGoodsSt struct {
 }
 
 func (a *DaTaoKeApp) GetStaleGoods(pageId int64, startTime int64, endTime int64, params Params) (res *GetStaleGoodsRespBody, err error) {
+	params.Set("version", "v1.0.1")
 	params.Set("pageId", pageId)
 	params.Set("startTime", time.Unix(startTime, 0).Format("2006-01-02 15:04:05"))
 	if endTime != 0 {

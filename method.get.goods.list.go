@@ -15,6 +15,7 @@ type GetGoodsListRespBody struct {
 }
 
 func (a *DaTaoKeApp) GetGoodsList(pageId int64, params Params) (res *GetGoodsListRespBody, err error) {
+	params.Set("version", "v1.2.4")
 	params.Set("pageId", pageId)
 	bResp, err := a.postQuery(params, GetGoodsListURI)
 	if err != nil {

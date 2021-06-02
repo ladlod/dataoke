@@ -17,6 +17,7 @@ type PullGoodsByTimeRespBody struct {
 }
 
 func (a *DaTaoKeApp) PullGoodsByTime(pageId int64, startTime int64, endTime int64, params Params) (res *PullGoodsByTimeRespBody, err error) {
+	params.Set("version", "v1.2.3")
 	params.Set("pageId", pageId)
 	params.Set("startTime", time.Unix(startTime, 0).Format("2006-01-02 15:04:05"))
 	if endTime != 0 {

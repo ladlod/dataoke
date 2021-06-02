@@ -43,7 +43,6 @@ func (d *DaTaoKeApp) postQuery(params Params, uri string) (resp []byte, err erro
 	ts := time.Now().UnixNano()
 	nonce := 100000 + rand.Int63n(900000)
 	params.Set("appKey", d.appKey)
-	params.Set("version", "v1.2.4")
 	params.Set("timer", ts)
 	params.Set("nonce", nonce)
 	params.Set("signRan", d.createSign(nonce, ts))
