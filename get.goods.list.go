@@ -53,7 +53,7 @@ type TaobaoGoodsSt struct {
 	CouponStartTime  string  `json:"couponStartTime"`  // 优惠券开始时间
 	CouponEndTime    string  `json:"couponEndTime"`    // 优惠券结束时间
 	CouponPrice      float64 `json:"couponPrice"`      // 优惠券金额
-	CouponConditions float64 `json:"couponConditions"` // 优惠券最低消费
+	CouponConditions string  `json:"couponConditions"` // 优惠券最低消费
 	CouponTotalNum   int64   `json:"couponTotalNum"`   // 优惠券总数
 
 	// 活动相关信息
