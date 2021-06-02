@@ -39,6 +39,10 @@ func (p Params) GetJsonBody() []byte {
 	return body
 }
 
+func (p Params) Clear() {
+	p = make(Params)
+}
+
 func toString(i interface{}) string {
 	switch v := i.(type) {
 	case string:
