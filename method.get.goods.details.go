@@ -8,6 +8,7 @@ type GetGoodsDetailsResp struct {
 }
 
 func (a *DaTaoKeApp) GetGoodsDetails(pageId int64, id int64, goodsId string) (res *TaobaoGoodsSt, err error) {
+	params := NewParams()
 	params.Set("version", "v1.2.3")
 	if id != 0 {
 		params.Set("id", id)

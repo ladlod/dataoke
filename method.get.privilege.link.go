@@ -25,7 +25,7 @@ type GetPrivilegeLinkRespBody struct {
 	MinCommissionRate string  `json:"minCommissionRate"` // 最低佣金比
 }
 
-func (a *DaTaoKeApp) GetPrivilegeLink(goodsId string) (res *GetPrivilegeLinkRespBody, err error) {
+func (a *DaTaoKeApp) GetPrivilegeLink(goodsId string, params Params) (res *GetPrivilegeLinkRespBody, err error) {
 	params.Set("version", "v1.3.1")
 	params.Set("goodsId", goodsId)
 	bResp, err := a.postQuery(params, GetPrivilegeLinkURI)
