@@ -1,4 +1,4 @@
-module dataoke
+module github.com/ladlod/dataoke
 
 go 1.15
 
