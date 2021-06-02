@@ -65,7 +65,7 @@ func (d *DaTaoKeApp) postQuery(params Params, uri string) (resp []byte, err erro
 
 // createSign
 func (d *DaTaoKeApp) createSign(nonce int64, ts int64) (sign string) {
-	key := fmt.Sprintf("appKey=%v&timer=%v&nonce=%v&key=%v", d.appKey, ts, nonce, d.appSecret)
+	signStr := fmt.Sprintf("appKey=%v&timer=%v&nonce=%v&key=%v", d.appKey, ts, nonce, d.appSecret)
 	h := md5.New()
 	h.Write([]byte(signStr))
 	cipherStr := h.Sum(nil)

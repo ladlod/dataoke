@@ -75,7 +75,7 @@ type TaobaoGoodsSt struct {
 	CommissionRate float64              `json:"commissionRate"` // 佣金比例
 }
 
-func (a *DaTaoKeApp) GetGoodsList(PageId int64, params Params) (res *GetGoodsListRespBody, err error) {
+func (a *DaTaoKeApp) GetGoodsList(pageId int64, params Params) (res *GetGoodsListRespBody, err error) {
 	params.Set("pageId", pageId)
 	bResp, err := a.postQuery(params, GetGoodsListURI)
 	if err != nil {
