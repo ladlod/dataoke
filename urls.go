@@ -14,5 +14,6 @@ const (
 	GetOrderDetailsURI = "api/tb-service/get-order-details"
 
 	// trans
+	ParseTaokoulingURI  = "api/tb-service/parse-taokouling"
 	GetPrivilegeLinkURI = "api/tb-service/get-privilege-link"
 )
