@@ -8,7 +8,7 @@ type GetPrivilegeLinkResp struct {
 }
 
 type GetPrivilegeLinkRespBody struct {
-	ItemId            int64   `json:"itemId"`            // 商品id
+	ItemId            string  `json:"itemId"`            // 商品id
 	OriginalPrice     float64 `json:"originalPrice"`     // 商品原价
 	ActualPrice       float64 `json:"actualPrice"`       // 商品券后价
 	ItemUrl           string  `json:"itemUrl"`           // 商品淘客链接
