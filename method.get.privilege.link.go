@@ -19,8 +19,8 @@ type GetPrivilegeLinkRespBody struct {
 	CouponEndTime     string  `json:"couponEndTime"`     // 优惠券结束时间
 	CouponStartTime   string  `json:"couponStartTime"`   // 优惠券开始时间
 	CouponInfo        string  `json:"couponInfo"`        // 优惠券面额描述
-	CouponTotalCount  int64   `json:"couponTotalCount"`  // 优惠券总量
-	CouponRemainCount int64   `json:"couponRemainCount"` // 优惠券余量
+	CouponTotalCount  string  `json:"couponTotalCount"`  // 优惠券总量
+	CouponRemainCount string  `json:"couponRemainCount"` // 优惠券余量
 	MaxCommissionRate string  `json:"maxCommissionRate"` // 佣金比例
 	MinCommissionRate string  `json:"minCommissionRate"` // 最低佣金比
 }
