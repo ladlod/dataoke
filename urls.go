@@ -10,6 +10,9 @@ const (
 	GetNewestGoodsURI  = "api/goods/get-newest-goods"
 	GetGoodsDetailsURI = "api/goods/get-goods-details"
 
+	// order
+	GetOrderDetailsURI = "api/tb-service/get-order-details"
+
 	// trans
 	GetPrivilegeLinkURI = "api/tb-service/get-privilege-link"
 )

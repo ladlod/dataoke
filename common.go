@@ -67,6 +67,9 @@ type TaobaoGoodsSt struct {
 	CommissionRate float64              `json:"commissionRate"` // 佣金比例
 }
 
+type TaoBaoOrderSt struct {
+}
+
 // TaoBaoShopType 店铺类型
 type TaoBaoShopType int64
 
@@ -93,3 +96,6 @@ const (
 	ActivityRush      = 1 // 淘抢购
 	ActivityJuhuasuan = 2 // 聚划算
 )
+
+// TaoBaoOrderQueryType
+type TaoBaoOrderQueryType int64
