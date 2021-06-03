@@ -14,7 +14,7 @@ type GetGoodsListRespBody struct {
 	GoScroll bool             `json:"goScroll"`
 }
 
-func (a *DaTaoKeApp) GetGoodsList(pageId int64, params Params) (res *GetGoodsListRespBody, err error) {
+func (a *DaTaoKeApp) GetGoodsList(pageId string, params Params) (res *GetGoodsListRespBody, err error) {
 	params.Set("version", "v1.2.4")
 	params.Set("pageId", pageId)
 	bResp, err := a.postQuery(params, GetGoodsListURI)
