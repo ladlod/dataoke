@@ -16,4 +16,9 @@ const (
 	// trans
 	ParseTaokoulingURI  = "api/tb-service/parse-taokouling"
 	GetPrivilegeLinkURI = "api/tb-service/get-privilege-link"
+
+	// leaderboard
+	GetNineOpListURI         = "api/goods/nine/op-goods-list"
+	GetHighCommissionListURI = "api/goods/singlePage/list-height-commission "
+	GetExplosiveListURI      = "api/goods/explosive-goods-list"
 )

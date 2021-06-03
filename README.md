@@ -14,3 +14,8 @@ go语言大淘客sdk封装
 ## 转链相关方法
 - [ParseTaokouling](http://www.dataoke.com/kfpt/api-d.html?id=26)
 - [GetPrivilegeLink](http://www.dataoke.com/kfpt/api-d.html?id=7)
+
+## 获取各大榜单方法
+- [GetNineOpList](http://www.dataoke.com/kfpt/api-d.html?id=15)
+- [GetHighCommissionList](http://www.dataoke.com/kfpt/api-d.html?id=59)
+- [GetExplosiveList](http://www.dataoke.com/kfpt/api-d.html?id=34)

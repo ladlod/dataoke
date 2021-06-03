@@ -108,7 +108,8 @@ type TaoBaoOrderSt struct {
 
 	// 结算信息
 	TkOrderRole         int64  `json:"tk_order_role"`         // 2.佣金收益的第一归属者 3.从其他淘宝客佣金中进行分成的推广者
-	PubShareFee         string `json:"pub_share_fee"`         // 结算预估收入
+	PubShareFee         string `json:"pub_share_fee"`         // 结算实际收入
+	PubSharePreFee      string `json:"pub_share_pre_fee"`     // 结算预估收入
 	PubShareRate        string `json:"pub_share_rate"`        // 从结算佣金中分得的收益比率
 	SubsidyRate         string `json:"subsidy_rate"`          // 平台给与的补贴比率
 	TkTotalRate         string `json:"tk_total_rate"`         // 提成=收入比率×分成比率。指实际获得收益的比率
