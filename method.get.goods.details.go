@@ -4,10 +4,10 @@ import "fmt"
 
 type GetGoodsDetailsResp struct {
 	CommonRespHeader
-	Data *TaobaoGoodsSt `json:"data"`
+	Data *TaobaoGoodsDetailSt `json:"data"`
 }
 
-func (a *DaTaoKeApp) GetGoodsDetails(pageId int64, id int64, goodsId string) (res *TaobaoGoodsSt, err error) {
+func (a *DaTaoKeApp) GetGoodsDetails(pageId int64, id int64, goodsId string) (res *TaobaoGoodsDetailSt, err error) {
 	params := NewParams()
 	params.Set("version", "v1.2.3")
 	if id != 0 {

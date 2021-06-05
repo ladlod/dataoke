@@ -74,6 +74,13 @@ type TaobaoGoodsSt struct {
 	CommissionRate float64              `json:"commissionRate"` // 佣金比例
 }
 
+type TaobaoGoodsDetailSt struct {
+	TaobaoGoodsSt
+	DetailPics string `json:"detailPics"`
+	Imgs       string `json:"imgs"`
+	Reimgs     string `json:"reimgs"`
+}
+
 type TaoBaoOrderSt struct {
 	// 订单基本信息
 	TradeId          string           `json:"trade_id"`           // 订单编号
