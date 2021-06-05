@@ -15,28 +15,29 @@ type ErrorResponse struct {
 
 type TaobaoGoodsSt struct {
 	// 商品相关信息
-	Id               int64    `json:"id"`               // 大淘客商品id
-	GoodsId          string   `json:"goodsId"`          // 淘宝商品id
-	Title            string   `json:"title"`            // 淘宝标题
-	Dtitle           string   `json:"dtitle"`           // 大淘客短标题
-	ItemLink         string   `json:"itemLink"`         // 商品链接
-	OriginalPrice    float64  `json:"originalPrice"`    // 原价
-	ActualPrice      float64  `json:"actualPrice"`      // 现价
-	MonthSales       int64    `json:"monthSales"`       // 近30天销量
-	TwoHoursSales    int64    `json:"twoHoursSales"`    // 近两小时销量
-	DailySales       int64    `json:"dailySales"`       // 当日销量
-	Desc             string   `json:"desc"`             // 推广文案
-	CreateTime       string   `json:"createTime"`       // 商品创建时间
-	MainPic          string   `json:"mainPic"`          // 商品主图
-	MarketingMainPic string   `json:"marketingMainPic"` // 营销主图
-	SpecialText      []string `json:"specialText"`      // 特色文案
-	Video            string   `json:"video"`            // 商品视频
-	Cid              int64    `json:"cid"`              // 大淘客分类id
-	Subcid           []int64  `json:"subcid"`           // 大淘客二级分类id
-	Tbcid            int64    `json:"tbcid"`            // 淘宝品类id
-	Haitao           int64    `json:"haitao"`           // 是否为海淘
-	Tchaoshi         int64    `json:"tchaoshi"`         // 是否为天猫超市
-	Yunfeixian       int64    `json:"yunfeixian"`       // 是否有运费险
+	Id                     int64    `json:"id"`                     // 大淘客商品id
+	GoodsId                string   `json:"goodsId"`                // 淘宝商品id
+	Title                  string   `json:"title"`                  // 淘宝标题
+	Dtitle                 string   `json:"dtitle"`                 // 大淘客短标题
+	ItemLink               string   `json:"itemLink"`               // 商品链接
+	OriginalPrice          float64  `json:"originalPrice"`          // 原价
+	ActualPrice            float64  `json:"actualPrice"`            // 现价
+	MonthSales             int64    `json:"monthSales"`             // 近30天销量
+	TwoHoursSales          int64    `json:"twoHoursSales"`          // 近两小时销量
+	DailySales             int64    `json:"dailySales"`             // 当日销量
+	Desc                   string   `json:"desc"`                   // 推广文案
+	CreateTime             string   `json:"createTime"`             // 商品创建时间
+	MainPic                string   `json:"mainPic"`                // 商品主图
+	MarketingMainPic       string   `json:"marketingMainPic"`       // 营销主图
+	SpecialText            []string `json:"specialText"`            // 特色文案
+	Video                  string   `json:"video"`                  // 商品视频
+	Cid                    int64    `json:"cid"`                    // 大淘客分类id
+	Subcid                 []int64  `json:"subcid"`                 // 大淘客二级分类id
+	Tbcid                  int64    `json:"tbcid"`                  // 淘宝品类id
+	Haitao                 int64    `json:"haitao"`                 // 是否为海淘
+	Tchaoshi               int64    `json:"tchaoshi"`               // 是否为天猫超市
+	Yunfeixian             int64    `json:"yunfeixian"`             // 是否有运费险
+	FreeshipRemoteDistrict int64    `json:"freeshipRemoteDistrict"` // 偏远地区是否包邮
 
 	// 店铺相关信息
 	ShopType    TaoBaoShopType `json:"shopType"`    // 店铺类型
