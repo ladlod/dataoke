@@ -11,7 +11,9 @@ type GetNewestGoodsResp struct {
 }
 
 type GetNewestGoodsRespBody struct {
-	List []*GoodsUpdateInfoSt `json:"list"`
+	List     []*GoodsUpdateInfoSt `json:"list"`
+	PageId   string               `json:"pageId"`
+	TotalNum int64                `json:"totalNum"`
 }
 
 type GoodsUpdateInfoSt struct {
