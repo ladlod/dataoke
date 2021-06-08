@@ -19,6 +19,6 @@ const (
 
 	// leaderboard
 	GetNineOpListURI         = "api/goods/nine/op-goods-list"
-	GetHighCommissionListURI = "api/goods/singlePage/list-height-commission "
+	GetHighCommissionListURI = "api/goods/singlePage/list-height-commission"
 	GetExplosiveListURI      = "api/goods/explosive-goods-list"
 )
