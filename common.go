@@ -45,7 +45,7 @@ type TaobaoGoodsSt struct {
 	SellerId    string         `json:"sellerId"`    // 淘宝卖家id
 	ShopName    string         `json:"shopName"`    // 店铺名称
 	ShopLogo    string         `json:"shopLogo"`    // 店铺logo
-	ShopLevel   int64          `json:"shopLevel"`   // 店铺等级
+	ShopLevel   interface{}    `json:"shopLevel"`   // 店铺等级, 因字段类型不明确，暂时使用interface类型
 
 	// 优惠券相关信息
 	CouponLink       string  `json:"couponLink"`       // 领券链接
