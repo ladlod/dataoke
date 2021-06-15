@@ -182,7 +182,8 @@ const (
 type TaoBaoOrderState int64
 
 const (
-	OrderStateTimeout = 1
-	OrderStateCancel  = 2
-	OrderStateRefund  = 3
+	OrderStatePaid     = 12 // 已付款，等待发货
+	OrderStateSucc     = 14 // 买家确认收货，但未结算
+	OrderStateComplete = 3  // 订单结算
+	OrderStateInvalid  = 13 // 订单失效
 )
