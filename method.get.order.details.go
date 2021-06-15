@@ -16,7 +16,7 @@ type GetOrderDetailRespBody struct {
 	PageNo        int64                   `json:"page_no"`
 	PageSize      int64                   `json:"page_size"`
 	PositionIndex string                  `json:"position_index"`
-	Result        *GetOrderDetailResultSt `json:"result"`
+	Results       *GetOrderDetailResultSt `json:"results"`
 	ErrorResponse *ErrorResponse          `json:"error_response,omitempty"`
 }
 
