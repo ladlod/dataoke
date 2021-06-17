@@ -4,11 +4,7 @@ import "fmt"
 
 type GetSuperCategoryResp struct {
 	CommonRespHeader
-	Data *GetSuperCategoryRespBody `json:"data"`
-}
-
-type GetSuperCategoryRespBody struct {
-	List []*TaobaoCategorySt `json:"list"`
+	Data []*TaobaoCategorySt `json:"data"`
 }
 
 type TaobaoCategorySt struct {
@@ -23,7 +19,7 @@ type TaobaoSubCategorySt struct {
 	SCpic    string `json:"scpic"`
 }
 
-func (a *DaTaoKeApp) GetSuperCategory() (res *GetSuperCategoryRespBody, err error) {
+func (a *DaTaoKeApp) GetSuperCategory() (res []*TaobaoCategorySt, err error) {
 	params := NewParams()
 	params.Set("version", "v1.1.0")
 	bResp, err := a.postQuery(params, GetSuperCategoryURI)
