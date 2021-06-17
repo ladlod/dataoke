@@ -175,7 +175,7 @@ type HalfPriceItemSt struct {
 	Price        float64 `json:"price"`
 	Yijuhua      string  `json:"yijuhua"`
 	Preferential string  `json:"preferential"`
-	CouponAmount int64   `json:"couponAmount"`
+	CouponAmount float64 `json:"couponAmount"`
 	ActivityId   int64   `json:"activityId"`
 	RestCount    int64   `json:"restCount"`
 	Tmall        int64   `json:"tmall"`
@@ -230,18 +230,18 @@ type ListTipOffRespBody struct {
 }
 
 type ListTipOffItemSt struct {
-	itemId          string  `json:"itemId"`
+	ItemId          string  `json:"itemId"`
 	Typ             string  `json:"type"`
-	img             string  `json:"img"`
-	url             string  `json:"url"`
-	title           string  `json:"title"`
-	remark          string  `json:"remark"`
-	activityPrice   float64 `json:"activityPrice"`
-	price           float64 `json:"price"`
-	commissionRate  int64   `json:"commissionRate"`
-	couponPrice     float64 `json:"couponPrice"`
-	couponStartTime string  `json:"couponStartTime"`
-	couponEndTime   string  `json:"couponEndTime"`
+	Img             string  `json:"img"`
+	Url             string  `json:"url"`
+	Title           string  `json:"title"`
+	Remark          string  `json:"remark"`
+	ActivityPrice   float64 `json:"activityPrice"`
+	Price           float64 `json:"price"`
+	CommissionRate  int64   `json:"commissionRate"`
+	CouponPrice     float64 `json:"couponPrice"`
+	CouponStartTime string  `json:"couponStartTime"`
+	CouponEndTime   string  `json:"couponEndTime"`
 }
 
 type ListTipOffTimeOptionSt struct {
