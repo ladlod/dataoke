@@ -221,38 +221,27 @@ type ListTipOffResp struct {
 }
 
 type ListTipOffRespBody struct {
-	PageId     string                    `json:"pageId"`
-	TotalNum   int64                     `json:"totalNum"`
-	SelectTime string                    `json:"selectTime"`
-	CurTime    string                    `json:"curTime"`
-	List       []*ListTipOffItemSt       `json:"list"`
-	TimeOption []*ListTipOffTimeOptionSt `json:"timeOption"`
+	PageId   string              `json:"pageId"`
+	TotalNum int64               `json:"totalNum"`
+	GoScroll bool                `json:"goScroll"`
+	List     []*ListTipOffItemSt `json:"list"`
 }
 
 type ListTipOffItemSt struct {
-	ItemId          string  `json:"itemId"`
-	Typ             string  `json:"type"`
-	Img             string  `json:"img"`
-	Url             string  `json:"url"`
-	Title           string  `json:"title"`
-	Remark          string  `json:"remark"`
-	ActivityPrice   float64 `json:"activityPrice"`
-	Price           float64 `json:"price"`
-	CommissionRate  int64   `json:"commissionRate"`
-	CouponPrice     float64 `json:"couponPrice"`
-	CouponStartTime string  `json:"couponStartTime"`
-	CouponEndTime   string  `json:"couponEndTime"`
+	ItemId     string `json:"itemId"`
+	Img        string `json:"img"`
+	Title      string `json:"title"`
+	Remark     string `json:"remark"`
+	Url        string `json:"url"`
+	UpdateTime string `json:"updateTime"`
 }
 
-type ListTipOffTimeOptionSt struct {
-	Label string `json:"label"`
-	Value string `json:"value"`
-}
-
+// 仅实现了topic为1的形式
 func (a *DaTaoKeApp) ListTipOff(pageId string, pageSize int64, params Params) (res *ListTipOffRespBody, err error) {
 	params.Set("version", "v3.0.0")
 	params.Set("pageId", pageId)
 	params.Set("pageSize", pageSize)
+	params.Set("topic", 1)
 	bResp, err := a.postQuery(params, ListTipOffURI)
 	if err != nil {
 		return
