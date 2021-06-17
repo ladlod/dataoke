@@ -91,3 +91,29 @@ func (a *DaTaoKeApp) GetExplosiveList(pageId string, pageSize int64, params Para
 
 	return
 }
+
+func (a *DaTaoKeApp) GetHistoryLowPriceList(pageId string, pageSize int64, params Params) (res *GetLeaderboardListRespBody, err error) {
+	params.Set("version", "v1.0.0")
+	params.Set("pageId", pageId)
+	params.Set("pageSize", pageSize)
+	bResp, err := a.postQuery(params, GetHistoryLowPriceListURI)
+	if err != nil {
+		return
+	}
+	resp := &GetLeaderboardListResp{}
+	err = dJson.Unmarshal(bResp, resp)
+	if err != nil {
+		return
+	}
+	if resp.Code != 0 {
+		err = fmt.Errorf("%v", resp.Msg)
+		return
+	}
+	if resp.Data == nil {
+		err = fmt.Errorf("nil resp")
+		return
+	}
+	res = resp.Data
+
+	return
+}
