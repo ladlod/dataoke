@@ -150,6 +150,43 @@ type GetHalfPriceDayResp struct {
 }
 
 type GetHalfPriceDayRespBody struct {
+	HalfPriceInfo *HalfPriceInfoSt `json:"halfPriceInfo"`
+	SessionsList  []*HalfSessionSt `json:"sessionsList"`
+}
+
+type HalfPriceInfoSt struct {
+	Banner string             `json:"banner"`
+	List   []*HalfPriceItemSt `json:"list"`
+}
+
+type HalfPriceItemSt struct {
+	Id           int64   `json:"id"`
+	ItemId       string  `json:"itemId"`
+	Top          int64   `json:"top"`
+	HdLeixing    int64   `json:"hdLeixing"`
+	QiangNum     int64   `json:"qiangNum"`
+	UpdateTime   string  `json:"updateTime"`
+	ServerTime   string  `json:"serverTime"`
+	StartTime    string  `json:"startTime"`
+	ItemSoldNum  int64   `json:"itemSoldNum"`
+	TodaySellNum string  `json:"todaySellNum"`
+	Name         string  `json:"name"`
+	PicUrl       string  `json:"picUrl"`
+	Price        float64 `json:"price"`
+	Yijuhua      string  `json:"yijuhua"`
+	Preferential string  `json:"preferential"`
+	CouponAmount int64   `json:"couponAmount"`
+	ActivityId   int64   `json:"activityId"`
+	RestCount    int64   `json:"restCount"`
+	Tmall        int64   `json:"tmall"`
+	ActivityType int64   `json:"activityType"`
+	UseQuan      int64   `json:"useQuan"`
+	IsMamaQuan   int64   `json:"isMamaQuan"`
+}
+
+type HalfSessionSt struct {
+	HpdTime string `json:"hpdTime"`
+	Status  string `json:"status"`
 }
 
 func (a *DaTaoKeApp) GetHalfPriceDay(pageId string, pageSize int64, params Params) (res *GetHalfPriceDayRespBody, err error) {
@@ -184,6 +221,32 @@ type ListTipOffResp struct {
 }
 
 type ListTipOffRespBody struct {
+	PageId     string                    `json:"pageId"`
+	TotalNum   int64                     `json:"totalNum"`
+	SelectTime string                    `json:"selectTime"`
+	CurTime    string                    `json:"curTime"`
+	List       []*ListTipOffItemSt       `json:"list"`
+	TimeOption []*ListTipOffTimeOptionSt `json:"timeOption"`
+}
+
+type ListTipOffItemSt struct {
+	itemId          string  `json:"itemId"`
+	Typ             string  `json:"type"`
+	img             string  `json:"img"`
+	url             string  `json:"url"`
+	title           string  `json:"title"`
+	remark          string  `json:"remark"`
+	activityPrice   float64 `json:"activityPrice"`
+	price           float64 `json:"price"`
+	commissionRate  int64   `json:"commissionRate"`
+	couponPrice     float64 `json:"couponPrice"`
+	couponStartTime string  `json:"couponStartTime"`
+	couponEndTime   string  `json:"couponEndTime"`
+}
+
+type ListTipOffTimeOptionSt struct {
+	Label string `json:"label"`
+	Value string `json:"value"`
 }
 
 func (a *DaTaoKeApp) ListTipOff(pageId string, pageSize int64, params Params) (res *ListTipOffRespBody, err error) {
