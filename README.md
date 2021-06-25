@@ -19,3 +19,7 @@ go语言大淘客sdk封装
 - [GetNineOpList](http://www.dataoke.com/kfpt/api-d.html?id=15)
 - [GetHighCommissionList](http://www.dataoke.com/kfpt/api-d.html?id=59)
 - [GetExplosiveList](http://www.dataoke.com/kfpt/api-d.html?id=34)
+- [GetHistoryLowPriceList](http://www.dataoke.com/kfpt/api-d.html?id=48)
+- [GetHalfPriceDay](http://www.dataoke.com/kfpt/api-d.html?id=38)
+- [ListTipOff](http://www.dataoke.com/kfpt/api-d.html?id=62)
+- [SuperDiscountGoods](http://www.dataoke.com/kfpt/api-d.html?id=39)
